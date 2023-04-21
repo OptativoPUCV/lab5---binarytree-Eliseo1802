@@ -85,7 +85,10 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-  return tree->root->pair;
+  tree->current = tree->root;
+  while(tree->current!=NULL){
+    return tree->current->pair;
+  }
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
