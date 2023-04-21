@@ -71,7 +71,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   while(tree->current!=NULL){
     void* aux = tree->current->pair->key;
     if(is_equal(tree,key,aux)) return tree->current->pair;
-    if(aux<key)
+    if(key>aux)
       tree->current = tree->current->right;
     else
       tree->current = tree->current->left;
@@ -85,7 +85,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+  return tree->root->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
