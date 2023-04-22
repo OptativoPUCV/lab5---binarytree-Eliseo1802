@@ -135,3 +135,17 @@ treemap.c:122:13: error: format not a string literal and no format arguments [-W
 cc1: all warnings being treated as errors
 Compilation failed
 a172285
+Sat 22 Apr 2023 11:46:26 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:122:22: error: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘void *’ [-Werror=format=]
+  122 |             printf("%s",tree->current->pair->key);
+      |                     ~^  ~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |                     |
+      |                      char *                void *
+      |                     %p
+cc1: all warnings being treated as errors
+Compilation failed
+2cda036
