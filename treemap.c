@@ -117,13 +117,14 @@ Pair * nextTreeMap(TreeMap * tree) {
           return tree->current->pair;
         else{
           while(tree->current<=aux){
-            tree->current = tree->current->parent;  
+            tree->current = tree->current->parent;
+            if(tree->current==tree->root)
+              return NULL;
           }  
           return tree->current->pair;
         }
       }
     }
   }
-  
   return NULL;
 }
