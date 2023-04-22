@@ -114,12 +114,11 @@ Pair * nextTreeMap(TreeMap * tree) {
           return tree->current->pair;
       }
       else{
-        if(tree->current>aux)
+        if(tree->current->pair->key>aux->pair->key)
           return tree->current->pair;
         else{
-          while(tree->current<=aux){
+          while(tree->current->pair->key<=aux->pair->key){
             tree->current = tree->current->parent;
-            printf("%d",tree->current);
             if(tree->current==tree->root)
               return NULL;
           }  
