@@ -97,28 +97,26 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
   if(tree->current!=NULL){
-    TreeNode* aux1 = tree->current;
-    TreeNode* aux2 = tree->current;
+    TreeNode* aux = tree->current;
 
     while(tree->current!=NULL){
       if(tree->current->right!=NULL){
         tree->current = tree->current->right;
         if(tree->current->left!=NULL){
           while(tree->current!=NULL){
-            aux1 = tree->current;
+            aux = tree->current;
             tree->current = tree->current->left;  
           }
-          return aux1->pair;
+          return aux->pair;
         }
         else
           return tree->current->pair;
       }
       else{
-        //tree->current = tree->current->parent;
-        if(tree->current>aux2)
+        if(tree->current>aux)
           return tree->current->pair;
         else{
-          while(tree->current<=aux2){
+          while(tree->current<=aux){
             tree->current = tree->current->parent;  
           }  
           return tree->current->pair;
