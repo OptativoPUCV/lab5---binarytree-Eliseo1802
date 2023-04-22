@@ -184,3 +184,24 @@ treemap.c:122:25: error: cast from pointer to integer of different size [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 dd5e95a
+Sat 22 Apr 2023 11:49:48 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:122:26: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  122 |             printf("%d",((int)tree->current->pair->value);
+      |                          ^
+treemap.c:122:58: error: expected ‘)’ before ‘;’ token
+  122 |             printf("%d",((int)tree->current->pair->value);
+      |                   ~                                      ^
+      |                                                          )
+treemap.c:124:27: error: expected ‘;’ before ‘}’ token
+  124 |               return NULL;
+      |                           ^
+      |                           ;
+  125 |           }
+      |           ~                
+cc1: all warnings being treated as errors
+Compilation failed
+53b0523
