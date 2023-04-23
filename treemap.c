@@ -84,7 +84,10 @@ Pair * firstTreeMap(TreeMap * tree) {
   TreeNode* aux = tree->current;
   while(aux!=NULL){
     tree->current = tree->current->left;
-    if(tree->current==NULL) return aux->pair; 
+    if(tree->current==NULL){
+      tree->current = aux;
+      return aux->pair; 
+    }
     aux = tree->current;
   }
   return NULL;
