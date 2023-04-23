@@ -97,7 +97,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
   TreeNode* aux = tree->current;
-  
+  int k1 = (int*)tree->current->pair->key;
   if(tree->current!=NULL){
 
     while(tree->current!=NULL){
@@ -122,7 +122,8 @@ Pair * nextTreeMap(TreeMap * tree) {
           while(tree->lower_than(tree->current->pair->key, aux->pair->key) == 1
             || is_equal(tree,tree->current->pair->key, aux->pair->key) == 1){
             tree->current = tree->current->parent;
-            print(tree->current->pair->key);
+            
+            printf("%d", k1);
             if(tree->current == tree->root)
               return NULL;
           }  

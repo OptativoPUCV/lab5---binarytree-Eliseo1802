@@ -461,3 +461,14 @@ treemap.c:125:13: error: implicit declaration of function ‘print’; did you m
 cc1: all warnings being treated as errors
 Compilation failed
 4e30d49
+Sun 23 Apr 2023 12:36:06 AM UTC: 
+ treemap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:100:12: error: initialization of ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  100 |   int k1 = (int*)tree->current->pair->key;
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+167cffa
