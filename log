@@ -381,3 +381,14 @@ treemap.c:121:17: error: implicit declaration of function ‘lower_than_int’ [
 cc1: all warnings being treated as errors
 Compilation failed
 1435be1
+Sun 23 Apr 2023 12:26:18 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:121:17: error: implicit declaration of function ‘lower_than’ [-Werror=implicit-function-declaration]
+  121 |           while(lower_than(tree->current->pair->key, aux->pair->key)
+      |                 ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bbe89b8
