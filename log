@@ -325,3 +325,13 @@ Sun 23 Apr 2023 12:05:26 AM UTC:
  tests:  12|6
 total_score: 15/70
 885a54e
+Sun 23 Apr 2023 12:19:52 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:121:48: error: lvalue required as left operand of assignment
+  121 |           while((int*)tree->current->pair->key = (int*)aux->pair->key){
+      |                                                ^
+Compilation failed
+6e4abc5
