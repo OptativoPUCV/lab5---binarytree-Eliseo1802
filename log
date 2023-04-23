@@ -643,3 +643,9 @@ In file included from test.c:2:
       |             ^~~~
 Compilation failed
 ea06479
+Sun 23 Apr 2023 02:06:20 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|0
+   [ INFO ] inicializando el arbol...
+afc0a80
