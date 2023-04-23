@@ -114,7 +114,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   
   while(is_equal(tree, p->key, key) == 0){
     p = nextTreeMap(tree);
-    p = searchTreeMap(tree,p->key);
+    p = searchTreeMap(tree,&p->key);
     if(p==NULL) return ub_node;
     ub_node = p;
   }
