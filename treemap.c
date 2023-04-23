@@ -72,7 +72,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   
   while(tree->current!=NULL){
     while(p->pair->key!=key)
-      p->pair = nextTreeMap(tree)
+      p->pair = nextTreeMap(tree);
     return p->pair;
   }
   return NULL;
