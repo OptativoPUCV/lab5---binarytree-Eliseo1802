@@ -109,9 +109,14 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-  Pair * p = searchTreeMap(tree, key);
+  Pair * p = firstTreeMap(tree);
+  Pair * ub_node = p;
   
-  
+  while(is_equal(tree, p->key, key) == 0){
+    p = nextTreeMap(tree);
+    if(p==NULL) return ub_node;
+    ub_node = p;
+  }
   return p;
 }
 
