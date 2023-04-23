@@ -110,13 +110,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 Pair * upperBound(TreeMap * tree, void* key) {
   Pair * p = firstTreeMap(tree);
-  Pair * ub_node = p;
+  //Pair * ub_node = p;
   
   while(is_equal(tree, p->key, key) == 0){
     p = nextTreeMap(tree);
     if(p==NULL) return p;
     if(tree->lower_than(key,p->key) == 1) return p;
-    ub_node = p;
+    //ub_node = p;
   }
   return p;
 }
