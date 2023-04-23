@@ -649,3 +649,9 @@ Sun 23 Apr 2023 02:06:20 AM UTC:
  tests:  10|0
    [ INFO ] inicializando el arbol...
 afc0a80
+Sun 23 Apr 2023 02:06:32 AM UTC: 
+ treemap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  18|4
+total_score: 35/70
+db82448
