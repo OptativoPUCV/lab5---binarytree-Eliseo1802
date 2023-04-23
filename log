@@ -520,3 +520,16 @@ Sun 23 Apr 2023 12:38:26 AM UTC:
  tests:  15|5
 total_score: 25/70
 c670ca4
+Sun 23 Apr 2023 01:03:36 AM UTC: 
+ treemap.c | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:75:34: error: expected ‘;’ before ‘return’
+   75 |       p->pair = nextTreeMap(tree)
+      |                                  ^
+      |                                  ;
+   76 |     return p->pair;
+      |     ~~~~~~                        
+Compilation failed
+e6b51d9
