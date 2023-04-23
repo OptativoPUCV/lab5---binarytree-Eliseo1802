@@ -120,7 +120,6 @@ Pair * nextTreeMap(TreeMap * tree) {
         else{
           while(tree->lower_than(tree->current->pair->key, aux->pair->key) == 1
             || is_equal(tree,tree->current->pair->key, aux->pair->key) == 1){
-          //while((int*)tree->current->pair->key <= (int*)aux->pair->key){
             tree->current = tree->current->parent;
             printf("a");
             if(tree->current == tree->root)
