@@ -115,7 +115,7 @@ Pair * nextTreeMap(TreeMap * tree) {
           return tree->current->pair;
       }
       else{
-        if((int*)tree->current->pair->key > (int*)aux->pair->key)
+        if(tree->lower_than(tree->current->pair->key, aux->pair->key) == 0)
           return tree->current->pair;
         else{
           while(tree->lower_than(tree->current->pair->key, aux->pair->key) == 1
