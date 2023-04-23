@@ -69,7 +69,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 Pair * searchTreeMap(TreeMap * tree, void* key) {
   Pair* p = firstTreeMap(tree);
   
-  while(p->key!=key)
+  while(is_equal(tree, p->key, key) == 0)
     p = nextTreeMap(tree);
   return p;
 }
