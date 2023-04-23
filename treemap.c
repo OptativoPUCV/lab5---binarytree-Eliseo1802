@@ -118,7 +118,9 @@ Pair * nextTreeMap(TreeMap * tree) {
         if((int*)tree->current->pair->key > (int*)aux->pair->key)
           return tree->current->pair;
         else{
-          while((int*)tree->current->pair->key >= (int*)aux->pair->key){
+          while(lower_than_int(tree->current->pair->key, aux->pair->key)
+            || is_equal(tree,tree->current->pair->key, aux->pair->key)){
+          //while((int*)tree->current->pair->key <= (int*)aux->pair->key){
             tree->current = tree->current->parent;
             printf("a");
             if(tree->current == tree->root)
